@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Princess World</string>
+    <string name="screen_1">Profile</string>
+    <string name="screen_2">Tweets</string>
+</resources>
