@@ -1,6 +1,6 @@
 # Princess World
 #### A findom app for Android coming soon.
-[Download Princess World](https://github.com/evilthreads669966/princess_world/releases/download/0.4/princessworld.apk)
+[Download Princess World](https://github.com/evilthreads669966/princess_world/releases/download/0.1/princessworld.apk)
 
 ## Project Roadmap
 - Princess YouTube videos
