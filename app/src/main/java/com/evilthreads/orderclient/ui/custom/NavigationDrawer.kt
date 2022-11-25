@@ -55,7 +55,7 @@ import androidx.compose.ui.unit.sp
  **/
 @Composable
 fun DrawerHeader(){
-    Column(modifier = Modifier.fillMaxWidth().height(if (isTablet) 600.dp else 400.dp).background(Color(com.evilthreads.orderclient.R.color.purple_700)),horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center){
+    Column(modifier = Modifier.fillMaxWidth().height(if (isTablet) 400.dp else 300.dp).background(Color(com.evilthreads.orderclient.R.color.purple_700)),horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center){
         Text("Princess World", color = Color.White, fontSize = if(isTablet) 74.sp else 36.sp)
         Icon(imageVector = ImageVector.vectorResource(id = com.evilthreads.orderclient.R.drawable.venus_crown_256), contentDescription = null, tint = Color.White)
     }
@@ -68,7 +68,7 @@ fun DrawerBody(items: List<NavMenutItem>, onItemClick: (NavMenutItem) -> Unit){
             Row(modifier = Modifier.fillMaxWidth().padding(16.dp).clickable { onItemClick(item) }, verticalAlignment = Alignment.CenterVertically) {
                 Icon(imageVector = item.icon, contentDescription = null)
                 Spacer(modifier = Modifier.width(if(isTablet) 32.dp else 16.dp))
-                Text(item.title, fontSize = if(isTablet) 36.sp else 18.sp)
+                Text(item.title, fontSize = if(isTablet) 28.sp else 18.sp)
             }
         }
     }

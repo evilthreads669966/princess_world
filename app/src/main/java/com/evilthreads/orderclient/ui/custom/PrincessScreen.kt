@@ -85,7 +85,7 @@ fun Profile(princess: Princess, controller: NavHostController){
     val urihandler = LocalUriHandler.current
     Column(Modifier.fillMaxSize()) {
         ProfileHeader(princess)
-        Text(modifier = Modifier.padding(4.dp), text = "Photos", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+        Text(modifier = Modifier.padding(start = 16.dp), text = "Photos", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Gallery(princess.name, princess.photos, controller)
     }
 }
@@ -125,8 +125,8 @@ fun ProfileHeader(princess: Princess){
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun Gallery(name: String, photos: List<String>, controller: NavHostController){
-    val imageTabletModifier = Modifier.width(750.dp).height(750.dp).padding(16.dp)
-    val imagePhoneModifier = Modifier.width(350.dp).height(350.dp).padding(8.dp)
+    val imageTabletModifier = Modifier.width(750.dp).height(750.dp).padding(8.dp)
+    val imagePhoneModifier = Modifier.width(350.dp).height(350.dp).padding(4.dp)
     LazyRow(modifier = Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically){
         itemsIndexed(photos){ idx, photo ->
             Card(elevation = 8.dp, shape = RoundedCornerShape(4.dp), modifier = Modifier.padding(PaddingValues(4.dp))) {
