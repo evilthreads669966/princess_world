@@ -41,6 +41,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -84,6 +85,7 @@ fun Profile(princess: Princess, controller: NavHostController){
     val urihandler = LocalUriHandler.current
     Column(Modifier.fillMaxSize()) {
         ProfileHeader(princess)
+        Text(modifier = Modifier.padding(4.dp), text = "Photos", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Gallery(princess.name, princess.photos, controller)
     }
 }
