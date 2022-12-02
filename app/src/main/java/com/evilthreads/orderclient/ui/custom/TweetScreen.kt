@@ -18,8 +18,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
@@ -52,6 +54,10 @@ import com.evilthreads.orderclient.Tweet
  **/
 @Composable
 fun Tweets(tweets: List<Tweet>){
+    if(tweets.isEmpty())
+        Box(contentAlignment = Alignment.Center){
+            CircularProgressIndicator()
+        }
     LazyColumn{
         items(tweets){ tweet -> Tweet(tweet)}
     }
@@ -60,7 +66,9 @@ fun Tweets(tweets: List<Tweet>){
 @Composable
 fun Tweet(tweet: Tweet){
     val urihandler = LocalUriHandler.current
-    Card(elevation = 4.dp, modifier = Modifier.fillMaxWidth().padding(8.dp)) {
+    Card(elevation = 4.dp, modifier = Modifier
+        .fillMaxWidth()
+        .padding(8.dp)) {
         Column {
             Text(tweet.username, fontWeight = FontWeight.Bold)
             Spacer(modifier = Modifier.height(8.dp))
